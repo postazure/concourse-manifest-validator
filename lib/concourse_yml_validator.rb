@@ -1,4 +1,9 @@
 require 'YAML'
+require_relative 'concourse_resource'
+require_relative 'concourse_job_factory'
+require_relative 'concourse_correlator'
+
+
 class ConcourseYmlValidator
   def validate(path:)
     yml_info = read_yml_file(path)

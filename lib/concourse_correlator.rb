@@ -1,3 +1,5 @@
+require_relative 'validator_result'
+
 class ConcourseCorrelator
   def process_jobs(jobs:, resources:)
     jobs.each do |job|

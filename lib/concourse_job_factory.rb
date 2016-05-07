@@ -1,3 +1,6 @@
+require_relative 'concourse_job'
+require_relative 'concourse_job_dependency'
+
 class ConcourseJobFactory
   def build(job_info)
     dependencies = []
