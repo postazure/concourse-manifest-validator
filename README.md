@@ -3,6 +3,8 @@
  Validates that you have defined all of the resources that your jobs are depending on.
  Validates that all declared resources are consumed.
  
+ ![alt text](https://github.com/postazure/concourse-manifest-validator/blob/master/support/success_use_screenshot.png "Success Use")
+ ![alt text](https://github.com/postazure/concourse-manifest-validator/blob/master/support/failure_use_screenshot.png "Failure Use")
  
 ### Run using command
 `$ validate_manifest /path/to/file.yml`
