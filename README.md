@@ -26,6 +26,7 @@ install it as:
 
  
 ## Coming Soon
+ 1. Config travis
  1. Wrap concourse cli `fly` command to validate then run `fly`
  1. Check that tasks are defined
  1. Check concourse config file structure to ensure everything that is declared exists
