@@ -1,4 +1,4 @@
-require 'YAML'
+require 'yaml'
 require_relative 'concourse_resource'
 require_relative 'concourse_job_factory'
 require_relative 'concourse_correlator'
