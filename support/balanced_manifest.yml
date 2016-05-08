@@ -1,0 +1,70 @@
+resources:
+- name: main-project
+  type: git
+  source:
+    uri: git@github.com:something/sample.git
+
+- name: ci-config-repo
+  type: git
+  source:
+    uri: git@github.com:something/sample-other.git
+
+- name: cached-jar-1
+  type: s3
+  source:
+    bucket: concourse-instance-name
+    versioned_file: cached-jar-1.jar
+
+- name: cached-jar-2
+  type: s3
+  source:
+    bucket: concourse-instance-name
+    versioned_file: cached-jar-1.jar
+
+
+jobs:
+- name: build-jar-1
+  plan:
+    - get: ci-config-repo
+      trigger: true
+    - get: main-project
+      trigger: true
+    - task: build-jar-1-task
+      file: ci-config-repo/tasks/build-jar-1-task/build-jar-1-task.yml
+    - put: cached-jar-1
+      params:
+        file: jar/project-0.0.1-SNAPSHOT.jar
+
+- name: build-jar-2
+  plan:
+    - get: ci-config-repo
+      trigger: true
+    - get: main-project
+      trigger: true
+    - task: build-jar-2-task
+      file: ci-config-repo/tasks/build-jar-2-task/build-jar-2-task.yml
+    - put: cached-jar-2
+      params:
+        file: jar/project-0.0.1-SNAPSHOT.jar
+
+- name: deploy-jar-1
+  plan:
+    - get: main-project
+      passed: [build-jar-1]
+    - get: ci-config-repo
+    - get: cached-jar-1
+      passed: [build-jar-1]
+      trigger: true
+    - task: deploy-jar-1-task
+      file: ci-config-repo/tasks/deploy-jar-1-task/deploy-jar-1-task.yml
+
+- name: deploy-jar-2
+  plan:
+    - get: main-project
+      passed: [deploy-jar-2]
+    - get: ci-config-repo
+    - get: cached-jar-2
+      passed: [deploy-jar-2]
+      trigger: true
+    - task: deploy-jar-2-task
+      file: ci-config-repo/tasks/deploy-jar-2-task/deploy-jar-2-task.yml
