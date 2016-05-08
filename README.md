@@ -1,6 +1,7 @@
 # Concourse Manifest Validator
  
- Validate that you have defined all of the resources that your jobs are depending on.
+ Validates that you have defined all of the resources that your jobs are depending on.
+ Validates that all declared resources are consumed.
  
 ### Run using command
 `$ validate_manifest /path/to/file.yml`
@@ -22,6 +23,5 @@
  
 ## Coming Soon
  
- 1. Check if unused resources have been declaired
- 2. Check that tasks are defined
- 3. Check concourse config file structure to ensure everything that is declared exists
+ 1. Check that tasks are defined
+ 1. Check concourse config file structure to ensure everything that is declared exists

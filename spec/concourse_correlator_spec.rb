@@ -25,5 +25,24 @@ describe ConcourseCorrelator do
         expect(missing_dep.name).to eq 'bar_resource'
       end
     end
+
+    context 'when there are extra resources' do
+      let(:resource_list) do
+        [
+            ConcourseResource.new(name: 'bar_resource'),
+            ConcourseResource.new(name: 'extra-resource')
+        ]
+      end
+
+      it 'should ensure that all resources are used by jobs' do
+        result = subject.process_jobs(jobs: job_list, resources: resource_list)
+
+        expect(result.success?).to be false
+        expect(result.failed_resources.length).to eq 1
+
+        failed_resource = result.failed_resources.first
+        expect(failed_resource.name).to eq 'extra-resource'
+      end
+    end
   end
 end
