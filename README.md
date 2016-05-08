@@ -1,19 +1,33 @@
-# Concourse Manifest Validator
- 
- Validates that you have defined all of the resources that your jobs are depending on.
- Validates that all declared resources are consumed.
+# PreflightCheck
+
+Validates that you have defined all of the resources that your jobs are depending on.
+Validates that all declared resources are consumed.
  
  ![alt text](https://github.com/postazure/concourse-manifest-validator/blob/master/support/success_use_screenshot.png "Success Use")
  ![alt text](https://github.com/postazure/concourse-manifest-validator/blob/master/support/failure_use_screenshot.png "Failure Use")
- 
-### Run using command
-`$ validate_manifest /path/to/file.yml`
+
+## Installation
+
+install it as:
+
+    $ gem install preflight_check
+
+### Usage
+
+$ validate_manifest /path/to/file.yml`
  
  or
     
-`$ ruby validate_manifest.rb /path/to/file.yml`
+$ ruby validate_manifest.rb /path/to/file.yml`
  
+ 
+## Contributing
 
+1. Fork it ( https://github.com/[my-github-username]/preflight_check/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
 
  
 ## Coming Soon

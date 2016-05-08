@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem 'rspec'
-gem 'colorize'
+# Specify your gem's dependencies in preflight_check.gemspec
+gemspec

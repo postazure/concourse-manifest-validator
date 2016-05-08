@@ -1,3 +1,5 @@
+require_relative '../lib/preflight_check/concourse_yml_validator'
+
 describe ConcourseCorrelator do
   let(:job_list) { [ConcourseJob.new(name: 'foo_job', dependencies: [ConcourseJobDependency.new(name: 'bar_resource')])] }
 

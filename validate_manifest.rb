@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'colorize'
-require_relative './lib/concourse_yml_validator'
+require_relative './lib/preflight_check/concourse_yml_validator'
 
 def print_failed_jobs(result)
   puts "\nMissing Dependencies".underline

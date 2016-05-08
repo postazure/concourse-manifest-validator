@@ -1,8 +1,15 @@
+PATH
+  remote: .
+  specs:
+    preflight_check (0.0.1)
+      colorize
+
 GEM
   remote: https://rubygems.org/
   specs:
     colorize (0.7.7)
     diff-lcs (1.2.5)
+    rake (10.4.2)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
@@ -20,5 +27,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  colorize
+  bundler (~> 1.7)
+  preflight_check!
+  rake (~> 10.0)
   rspec
