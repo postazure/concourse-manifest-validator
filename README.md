@@ -17,7 +17,7 @@
 
  
 ## Coming Soon
- 1. Rename project/repo to 'Preflight'
+ 1. Rename project/repo to 'preflight-check'
  1. Gem-ify
  1. Wrap concourse cli `fly` command to validate then run `fly`
  1. Check that tasks are defined
