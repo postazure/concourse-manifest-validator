@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = PreflightCheck::VERSION
   spec.authors       = ["Max Gordon"]
   spec.email         = ["gordonmaxc@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = 'Pre-flight check your concourse config yaml before taking off.'
+  spec.description   = "Validates that you have defined all of the resources that your jobs are depending on.\nValidates that all declared resources are consumed."
   spec.homepage      = ""
   spec.license       = "MIT"
 
