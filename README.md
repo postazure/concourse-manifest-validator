@@ -6,8 +6,8 @@
 Validates that you have defined all of the resources that your jobs are depending on.
 Validates that all declared resources are consumed.
  
- ![Success Screenshot](https://github.com/postazure/preflight_check/blob/master/support/success_use_screenshot.png "Success Use")
- ![Failure Screenshot](https://github.com/postazure/preflight_check/blob/master/support/failure_use_screenshot.png "Failure Use")
+ ![Success Screenshot](https://github.com/postazure/preflight_check/blob/master/doc-support/success_use_screenshot.png "Success Use")
+ ![Failure Screenshot](https://github.com/postazure/preflight_check/blob/master/doc-support/failure_use_screenshot.png "Failure Use")
 
 ## Installation
 
