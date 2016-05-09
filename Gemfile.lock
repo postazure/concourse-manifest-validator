@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    preflight_check (0.0.1)
+    preflight_check (0.1.0)
       colorize
 
 GEM

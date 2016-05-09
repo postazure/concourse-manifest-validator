@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Max Gordon"]
   spec.email         = ["gordonmaxc@gmail.com"]
   spec.summary       = 'Pre-flight check your concourse config yaml before taking off.'
-  spec.description   = "Validates that you have defined all of the resources that your jobs are depending on.\nValidates that all declared resources are consumed."
+  spec.description   = "Validate your concourse config yaml before deploying."
   spec.homepage      = ""
   spec.license       = "MIT"
 
